@@ -6,11 +6,6 @@ import pluginVitest from '@vitest/eslint-plugin'
 import pluginCypress from 'eslint-plugin-cypress/flat'
 import oxlint from 'eslint-plugin-oxlint'
 
-// To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
-// import { configureVueProject } from '@vue/eslint-config-typescript'
-// configureVueProject({ scriptLangs: ['ts', 'tsx'] })
-// More info at https://github.com/vuejs/eslint-config-typescript/#advanced-setup
-
 export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
@@ -22,14 +17,14 @@ export default defineConfigWithVueTs(
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  pluginVue.configs['flat/essential'],
+  pluginVue.configs['flat/recommended'],
   vueTsConfigs.recommended,
-  
+
   {
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
   },
-  
+
   {
     ...pluginCypress.configs.recommended,
     files: [
@@ -37,5 +32,30 @@ export default defineConfigWithVueTs(
       'cypress/support/**/*.{js,ts,jsx,tsx}'
     ],
   },
+
   ...oxlint.configs['flat/recommended'],
+
+  {
+    rules: {
+      "vue/first-attribute-linebreak": [
+        "error",
+        {
+          "singleline": "below",
+          "multiline": "below"
+        }
+      ],
+
+      "vue/multiline-html-element-content-newline": [
+        "error",
+        {
+          "ignoreWhenEmpty": false,
+          "ignores": [
+            "pre",
+            "textarea"
+          ],
+          "allowEmptyLines": false
+        }
+      ]
+    }
+  }
 )
