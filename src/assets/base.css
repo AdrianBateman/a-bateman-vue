@@ -2,16 +2,18 @@
   --primary-color: hsl(0, 0%, 90%);
   --primary-bkgd: hsl(0, 0%, 10%);
   --accent-color: hsl(200, 96%, 56%);
+  --primary-font: Georgia, serif;
+  --secondary-font: Tahoma, sans-serif;
 }
 
-html,
 body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.8;
-  background: var(--primary-bkgd);
   min-height: 100vh;
   min-height: 100dvh;
+  margin: 0;
+  padding: 2rem;
+  font-family: var(--primary-font);
+  line-height: 1.8;
+  background: var(--primary-bkgd);
   color: var(--primary-color);
 }
 

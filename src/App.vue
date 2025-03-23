@@ -1,21 +1,10 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
+import TheHeader from './components/the-header/the-header.vue';
 </script>
 
 <template>
-  <header
-    class="header"
-  >
-    <h1>
-      Adrian Bateman
-
-      <small>
-        BSc Honours (Open)
-      </small>
-    </h1>
-  </header>
+  <TheHeader />
 
   <RouterView />
 </template>
-
-<style scoped></style>
