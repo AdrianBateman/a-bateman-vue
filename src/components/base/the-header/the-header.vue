@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <header
     class="header"
@@ -26,7 +24,7 @@
 
 <style scoped lang="scss">
 .header {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   padding-bottom: 2rem;
   font-family: var(--secondary-font);
   border-bottom: 1px solid var(--primary-color);
@@ -51,7 +49,4 @@
     font-style: normal;
   }
 }
-
-
-
 </style>

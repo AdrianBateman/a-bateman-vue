@@ -6,10 +6,16 @@
   --secondary-font: Tahoma, sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  display: flex;
   min-height: 100vh;
   min-height: 100dvh;
-  margin: 0;
   padding: 2rem;
   font-family: var(--primary-font);
   line-height: 1.8;
@@ -17,10 +23,8 @@ body {
   color: var(--primary-color);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.main-app {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  width: 100%;
 }
-
-main {}
