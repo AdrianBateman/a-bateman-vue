@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import theNavigation from '../the-navigation/the-navigation.vue';
+</script>
+
 <template>
   <header
     class="header"
@@ -19,6 +23,8 @@
         Website Developer
       </em>
     </p>
+
+    <theNavigation />
   </header>
 </template>
 
