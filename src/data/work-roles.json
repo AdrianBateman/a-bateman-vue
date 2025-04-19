@@ -23,7 +23,7 @@
             ]
         },
         {
-            "company": "Moose-Artist",
+            "company": "Moose-Artist ",
             "jobTitle": "Private Commission",
             "description": "<p>A bespoke website to showcase the artist's work. Written in PHP with a sprinkle of JavaScript and CSS.</p><p class=\"work-article-tile__text\">Speed is crucial along with displaying the artwork appropriately. This is achieved using the newer image compression format, <a href=\"https://developers.google.com/speed/webp\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">WebP</a>, with a fallback for older browsers that do not support WebP.</p>"
         }
