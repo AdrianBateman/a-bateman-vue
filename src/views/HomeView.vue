@@ -1,47 +1,34 @@
+<script setup lang="ts">
+import WorkArticle from '@/components/work/work-article/work-article.vue';
+
+import * as Work from '@/data/work-roles.json';
+
+const roles = Work.roles;
+</script>
+
 <template>
   <main>
     <h2>Work</h2>
 
-    <article>
-      <h3>
-        Senior website developer
-        <small>
-          Dreams Ltd
-        </small>
-      </h3>
+    <WorkArticle
+      v-for="{
+        company,
+        jobTitle,
+        description,
+        moreInfo,
+      }, index in roles"
+      :key="company + index.toString()"
 
-      <p>
-        Joining to assist with the migration of the site from
-        <a
-          href="https://github.com/magento/magento2/releases"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-        >
-          Majento
-        </a> over to
-        <a
-          href="https://www.sap.com/uk/products/acquired-brands/what-is-hybris.html"
-          rel="noopener noreferrer nofollow"
-          target="_blank"
-        >
-          SAP Hybris
-        </a>. Whilst here I have been
-        actively involved in and instrumental in key decision making process.
-        With our Service Integrators, we successfully launched our new website
-        in 2018, with excellent success.
-      </p>
-    </article>
-    <ol>
-      <li>
-        Ongoing <strong>Private commission</strong> - Moose Artist
-      </li>
+      :title="jobTitle"
+      :company
+      :description
+      :more-info
+    />
 
-      <li>
-        2017 - 2018 <strong>Junior website developer</strong> - Websites By Lime
-      </li>
+    <!-- <ol>
       <li>
         2012 - 2014 <strong>Website developer</strong> - Personal projects, holistic web shop
       </li>
-    </ol>
+    </ol> -->
   </main>
 </template>
