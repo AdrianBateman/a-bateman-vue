@@ -34,13 +34,13 @@
 
 <style scoped>
 .the-nav {
-  margin-top: 2rem;
+  margin-bottom: var(--size-xxl);
 }
 
 .the-nav__list {
     list-style: none;
     display: flex;
-    gap: 1rem
+    gap: var(--size-md);
 }
 
 .the-nav__link {

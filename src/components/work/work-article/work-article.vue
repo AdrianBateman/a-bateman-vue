@@ -93,21 +93,32 @@ defineProps({
   </article>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
   .work-article {
-    margin-bottom: 8rem;
-  }
+    margin-bottom: var(--size-xxl);
 
-  .work-article__title {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    line-height: 1;
-  }
+    &__title {
+      margin-bottom: var(--size-md);
+      font-size: var(--size-lg);
+      line-height: 1;
+    }
 
-  .work-article__title-small {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 300;
+    &__title-small {
+      display: block;
+      font-size: var(--size-md);
+      font-weight: 300;
+    }
+
+    &__description {
+      max-width: 65ch;
+      margin-bottom: var(--size-lg);
+      padding: 0;
+
+      :deep(strong) {
+        font-size: var(--size-sm);
+        font-family: var(--secondary-font);
+      }
+    }
   }
 
   .work-article__title-link,
@@ -123,36 +134,30 @@ defineProps({
     border-radius: 0;
   }
 
-  .work-article__description {
-    max-width: 65ch;
-    margin-bottom: 2rem;
-    padding: 0;
-  }
-
   .work-article-info {
-    margin-bottom: 2rem;
-  }
+    margin-bottom: var(--size-lg);
 
-  .work-article-info:last-of-type {
-    margin-bottom: 0;
-  }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
-  .work-article-info__title {
-    font-family: var(--secondary-font);
-    letter-spacing: 1px;
-    font-size: 1.5rem;
-  }
+    &__title {
+      font-size: var(--size-md);
+      font-family: var(--secondary-font);
+      letter-spacing: 1px;
+    }
 
-  .work-article-info__description {
-    max-width: 65ch;
-  }
+    &__description {
+      max-width: var(--max-text-width);
 
-  .work-article-info__description :deep(p:last-of-type) {
-    padding-bottom: 0;
-  }
+      :deep(p:last-of-type) {
+        padding-bottom: 0;
+      }
 
-  .work-article-info__description :deep(strong) {
-    font-size: 1.2rem;
-    font-family: var(--secondary-font);
+      :deep(strong) {
+        font-size: var(--size-sm);
+        font-family: var(--secondary-font);
+      }
+    }
   }
 </style>

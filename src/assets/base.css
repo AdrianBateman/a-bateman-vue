@@ -4,6 +4,12 @@
   --accent-color: hsl(200, 96%, 56%);
   --primary-font: Georgia, serif;
   --secondary-font: Tahoma, sans-serif;
+  --max-text-width: 65ch;
+  --size-sm: 1.309015rem;
+  --size-md: 1.61803rem;
+  --size-lg: 2.6180210809rem;
+  --size-xl: 4.23603664953rem;
+  --size-xxl: 6.85403438004rem;
 }
 
 * {
@@ -16,9 +22,9 @@ body {
   display: flex;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 2rem;
+  padding: var(--size-lg);
   font-family: var(--primary-font);
-  line-height: 1.8;
+  line-height: var(--size-lg);
   background: var(--primary-bkgd);
   color: var(--primary-color);
 }
@@ -31,7 +37,7 @@ h4 {
 }
 
 p {
-  padding-bottom: 1rem;
+  padding-bottom: var(--size-md);
 }
 
 .main-app {

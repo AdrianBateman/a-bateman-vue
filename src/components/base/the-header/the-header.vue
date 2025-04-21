@@ -6,6 +6,8 @@ import theNavigation from '../the-navigation/the-navigation.vue';
   <header
     class="header"
   >
+    <theNavigation />
+
     <p
       class="title"
     >
@@ -20,39 +22,47 @@ import theNavigation from '../the-navigation/the-navigation.vue';
       <em
         class="title-em"
       >
-        Website Developer
+        Website
+        <span
+          class="title-em--blue"
+        >
+          Developer
+        </span>
       </em>
     </p>
-
-    <theNavigation />
   </header>
 </template>
 
 <style scoped lang="scss">
 .header {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: var(--size-xxl);
   font-family: var(--secondary-font);
-  border-bottom: 1px solid var(--primary-color);
-  text-wrap: balance;
 }
 
 .title {
   padding: 0;
   margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: var(--size-lg);
+  font-weight: 500;
   line-height: 1;
-  letter-spacing: 1px;
 
   &-sm {
-    font-size: 1rem;
+    font-size: var(--size-sm);
+    font-weight: 300;
   }
 
   &-em {
     display: block;
-    font-size: 3rem;
+    margin-top: var(--size-md);
+    font-size: var(--size-xxl);
     font-style: normal;
+    font-weight: 900;
+    letter-spacing: -4px;
+
+    &--blue {
+      display: block;
+      color: var(--accent-color);
+    }
   }
 }
 </style>
