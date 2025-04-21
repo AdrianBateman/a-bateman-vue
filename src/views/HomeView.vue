@@ -13,6 +13,7 @@ const roles = Work.roles;
     <WorkArticle
       v-for="{
         company,
+        companyLink,
         jobTitle,
         description,
         moreInfo,
@@ -21,6 +22,7 @@ const roles = Work.roles;
 
       :title="jobTitle"
       :company
+      :company-link
       :description
       :more-info
     />

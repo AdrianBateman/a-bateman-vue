@@ -23,6 +23,17 @@ body {
   color: var(--primary-color);
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--secondary-font);
+}
+
+p {
+  padding-bottom: 1rem;
+}
+
 .main-app {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
