@@ -8,8 +8,6 @@ const roles = Work.roles;
 
 <template>
   <main>
-    <h2>Work</h2>
-
     <WorkArticle
       v-for="{
         company,

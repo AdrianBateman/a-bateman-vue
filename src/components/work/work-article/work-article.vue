@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import type {
     WorkRoleInfo,
@@ -34,19 +33,19 @@ defineProps({
     class="work-article"
   >
     <h3
-      class="work-article__title"
+      class="title"
     >
       {{ title }}
 
       <small
         v-if="company"
-        class="work-article__title-small"
+        class="title-small"
       >
         <a
           :href="companyLink"
           rel="noopener noreferrer nofollow"
           target="_blank"
-          class="work-article__title-link"
+          class="title-link"
         >
           {{ company }}
         </a>
@@ -55,7 +54,7 @@ defineProps({
 
     <p
       v-dompurify-html="description"
-      class="work-article__description"
+      class="description"
     />
 
     <template
@@ -64,15 +63,15 @@ defineProps({
       <div
         v-for="(info, index) in moreInfo"
         :key="info.title + index.toString()"
-        class="work-article-info"
+        class="info"
       >
         <h4
-          class="work-article-info__title"
+          class="info-title"
         >
           <a
             v-if="info.anchor"
             :href="info.anchor"
-            class="work-article-info__link"
+            class="info-link"
           >
             {{ info.title }}
           </a>
@@ -86,7 +85,7 @@ defineProps({
 
         <div
           v-dompurify-html="info.description"
-          class="work-article-info__description"
+          class="info-description"
         />
       </div>
     </template>
@@ -94,70 +93,70 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
-  .work-article {
-    margin-bottom: var(--size-xxl);
+.work-article {
+  margin-bottom: var(--size-xxl);
+}
 
-    &__title {
-      margin-bottom: var(--size-md);
-      font-size: var(--size-lg);
-      line-height: 1;
-    }
+.title {
+  margin-bottom: var(--size-md);
+  font-size: var(--size-lg);
+  line-height: 1;
+}
 
-    &__title-small {
-      display: block;
-      font-size: var(--size-md);
-      font-weight: 300;
-    }
+.title-small {
+  display: block;
+  font-size: var(--size-md);
+  font-weight: 300;
+}
 
-    &__description {
-      max-width: 65ch;
-      margin-bottom: var(--size-lg);
-      padding: 0;
+.description {
+  max-width: 65ch;
+  margin-bottom: var(--size-lg);
+  padding: 0;
 
-      :deep(strong) {
-        font-size: var(--size-sm);
-        font-family: var(--secondary-font);
-      }
-    }
+  :deep(strong) {
+    font-size: var(--size-sm);
+    font-family: var(--secondary-font);
+  }
+}
+
+.title-link,
+.info-link {
+  border-radius: 50%;
+  color: inherit;
+}
+
+.title-link:hover,
+.info-link:hover {
+  border-bottom: 1px solid var(--primary-color);
+  transition: border-radius 150ms ease-out;
+  border-radius: 0;
+}
+
+.info {
+  margin-bottom: var(--size-lg);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.info-title {
+  font-size: var(--size-md);
+  font-family: var(--secondary-font);
+  letter-spacing: 1px;
+}
+
+.info-description {
+  max-width: var(--max-text-width);
+
+  :deep(p:last-of-type) {
+    padding-bottom: 0;
   }
 
-  .work-article__title-link,
-  .work-article-info__link {
-    border-radius: 50%;
-    color: inherit;
+  :deep(strong) {
+    font-size: var(--size-sm);
+    font-family: var(--secondary-font);
   }
-
-  .work-article__title-link:hover,
-  .work-article-info__link:hover {
-    border-bottom: 1px solid var(--primary-color);
-    transition: border-radius 150ms ease-out;
-    border-radius: 0;
-  }
-
-  .work-article-info {
-    margin-bottom: var(--size-lg);
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
-    &__title {
-      font-size: var(--size-md);
-      font-family: var(--secondary-font);
-      letter-spacing: 1px;
-    }
-
-    &__description {
-      max-width: var(--max-text-width);
-
-      :deep(p:last-of-type) {
-        padding-bottom: 0;
-      }
-
-      :deep(strong) {
-        font-size: var(--size-sm);
-        font-family: var(--secondary-font);
-      }
-    }
-  }
+}
 </style>

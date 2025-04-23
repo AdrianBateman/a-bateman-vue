@@ -1,29 +1,29 @@
 <template>
   <nav
-    class="the-nav"
+    class="nav"
   >
     <ul
-      class="the-nav__list"
+      class="list"
     >
       <li
-        class="the-nav__item"
+        class="item"
       >
         <RouterLink
           to="/"
-          exact-active-class="the-nav--active"
-          class="the-nav__link"
+          exact-active-class="link--active"
+          class="link"
         >
           Home
         </RouterLink>
       </li>
 
       <li
-        class="the-nav__item"
+        class="item"
       >
         <RouterLink
           to="/hobbies"
           exact-active-class="the-nav--active"
-          class="the-nav__link"
+          class="link"
         >
           Hobbies
         </RouterLink>
@@ -32,18 +32,18 @@
   </nav>
 </template>
 
-<style scoped>
-.the-nav {
+<style scoped lang="scss">
+.nav {
   margin-bottom: var(--size-xxl);
 }
 
-.the-nav__list {
+.list {
     list-style: none;
     display: flex;
     gap: var(--size-md);
 }
 
-.the-nav__link {
+.link {
   padding: .5rem 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -51,7 +51,7 @@
   border: 1px solid var(--primary-color);
 }
 
-.the-nav--active {
+.link--active {
   background-color: var(--primary-color);
   border-color: var(--primary-bkgd);
   color: var(--primary-bkgd);
