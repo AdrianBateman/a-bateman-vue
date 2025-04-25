@@ -1,10 +1,47 @@
 <script setup lang="ts">
-import AdvancedImage from '@/components/advanced-image/advanced-image.vue';
+import PictureComponent from '@/components/picture-component/picture-component.vue';
+import {
+    INKSCAPE_PATH,
+} from '@/constants/constants';
 
-const INKSCAPE_PATH = '/art/inkscape/';
-const ufoWebp = 'ufo-pattern_ez9amb.webp';
-const ufoPng = 'ufo-pattern_v03y9u.png';
-const ufoAvif = 'ufo-pattern_iepmks.avif';
+const inkscapeImages = [
+    {
+        title: 'UFO',
+        description: 'foo bar',
+        defaultUrl: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.png`,
+        altText: 'Line art of a UFO',
+        width: 501,
+        height: 331,
+        sources: [
+            {
+                url: `${INKSCAPE_PATH}/ufo-pattern_iepmks.avif`,
+                type: 'image/avif',
+            },
+            {
+                url: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.webp`,
+                type: 'image/webp',
+            },
+        ],
+    },
+    {
+        title: 'UFO 2',
+        description: 'baz waz',
+        defaultUrl: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.png`,
+        altText: 'Line art of a UFO',
+        width: 501,
+        height: 331,
+        sources: [
+            {
+                url: `${INKSCAPE_PATH}/ufo-pattern_iepmks.avif`,
+                type: 'image/avif',
+            },
+            {
+                url: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.webp`,
+                type: 'image/webp',
+            },
+        ],
+    },
+];
 </script>
 
 <template>
@@ -13,22 +50,30 @@ const ufoAvif = 'ufo-pattern_iepmks.avif';
       When not coding, I love to kick back and do some creative work using a range of media.
     </p>
 
-    <AdvancedImage
-      :default-url="INKSCAPE_PATH + ufoPng"
-      alt-text="Line art of a UFO"
-      :width="501"
-      :height="331"
-      :sources="[
-        {
-          url: INKSCAPE_PATH + ufoAvif,
-          type: 'image/avif'
-        },
-        {
-          url: INKSCAPE_PATH + ufoWebp,
-          type: 'image/webp'
-        }
-      ]"
-    />
+    <article
+      v-for="({
+        title,
+        description,
+        defaultUrl,
+        altText,
+        width,
+        height,
+        sources,
+      }, key) in inkscapeImages"
+      :key="defaultUrl + key.toString()"
+    >
+      <h2>{{ title }}</h2>
+
+      <p>{{ description }}</p>
+
+      <PictureComponent
+        :default-url
+        :alt-text
+        :width
+        :height
+        :sources
+      />
+    </article>
   </main>
 </template>
 
