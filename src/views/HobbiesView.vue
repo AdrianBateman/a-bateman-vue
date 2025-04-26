@@ -1,47 +1,8 @@
 <script setup lang="ts">
 import PictureComponent from '@/components/picture-component/picture-component.vue';
-import {
-    INKSCAPE_PATH,
-} from '@/constants/constants';
+import * as images from '@/data/images.json';
 
-const inkscapeImages = [
-    {
-        title: 'UFO',
-        description: 'foo bar',
-        defaultUrl: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.png`,
-        altText: 'Line art of a UFO',
-        width: 501,
-        height: 331,
-        sources: [
-            {
-                url: `${INKSCAPE_PATH}/ufo-pattern_iepmks.avif`,
-                type: 'image/avif',
-            },
-            {
-                url: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.webp`,
-                type: 'image/webp',
-            },
-        ],
-    },
-    {
-        title: 'UFO 2',
-        description: 'baz waz',
-        defaultUrl: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.png`,
-        altText: 'Line art of a UFO',
-        width: 501,
-        height: 331,
-        sources: [
-            {
-                url: `${INKSCAPE_PATH}/ufo-pattern_iepmks.avif`,
-                type: 'image/avif',
-            },
-            {
-                url: `${INKSCAPE_PATH}/ufo-pattern_ez9amb.webp`,
-                type: 'image/webp',
-            },
-        ],
-    },
-];
+const path = '/art/inkscape';
 </script>
 
 <template>
@@ -59,7 +20,7 @@ const inkscapeImages = [
         width,
         height,
         sources,
-      }, key) in inkscapeImages"
+      }, key) in images.art.inkscape"
       :key="defaultUrl + key.toString()"
     >
       <h2>{{ title }}</h2>
@@ -72,6 +33,7 @@ const inkscapeImages = [
         :width
         :height
         :sources
+        :path
       />
     </article>
   </main>

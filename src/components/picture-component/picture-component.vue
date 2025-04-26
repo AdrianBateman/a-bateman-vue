@@ -32,6 +32,10 @@ defineProps({
         type: Array<ImageSource>,
         default: undefined,
     },
+    path: {
+        type: String,
+        default: '',
+    },
 });
 </script>
 
@@ -43,7 +47,7 @@ defineProps({
       <source
         v-for="(source, key) in sources"
         :key="source.url + key.toString()"
-        :srcset="CLOUDINARY_URI + source.url"
+        :srcset="CLOUDINARY_URI + path + source.url"
         :type="source.type"
         :media="source.media"
         :height="source.height"
@@ -52,7 +56,7 @@ defineProps({
     </template>
 
     <img
-      :src="CLOUDINARY_URI + defaultUrl"
+      :src="CLOUDINARY_URI + path + defaultUrl"
       :alt="altText"
       :width
       :height
