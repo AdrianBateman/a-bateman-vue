@@ -35,7 +35,7 @@ import theNavigation from '../the-navigation/the-navigation.vue';
 
 <style scoped lang="scss">
 .header {
-  margin-bottom: var(--size-xxl);
+  margin-bottom: var(--size-lg);
   font-family: var(--secondary-font);
 }
 
@@ -53,7 +53,6 @@ import theNavigation from '../the-navigation/the-navigation.vue';
 
   &-em {
     display: block;
-    margin-top: var(--size-md);
     font-size: var(--size-xxl);
     font-style: normal;
     font-weight: 900;

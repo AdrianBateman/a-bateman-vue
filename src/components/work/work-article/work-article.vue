@@ -115,7 +115,6 @@ defineProps({
   padding: 0;
 
   :deep(strong) {
-    font-size: var(--size-sm);
     font-family: var(--secondary-font);
   }
 }
@@ -155,7 +154,6 @@ defineProps({
   }
 
   :deep(strong) {
-    font-size: var(--size-sm);
     font-family: var(--secondary-font);
   }
 }

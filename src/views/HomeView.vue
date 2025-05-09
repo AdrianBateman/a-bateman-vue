@@ -24,11 +24,5 @@ const roles = Work.roles;
       :description
       :more-info
     />
-
-    <!-- <ol>
-      <li>
-        2012 - 2014 <strong>Website developer</strong> - Personal projects, holistic web shop
-      </li>
-    </ol> -->
   </main>
 </template>

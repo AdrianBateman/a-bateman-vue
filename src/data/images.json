@@ -3,7 +3,7 @@
         "inkscape": [
             {
                 "title": "UFO",
-                "description": "Line art of a UFO",
+                "description": "Line art, originally on A3 paper, transformed into SVG for web.",
                 "defaultUrl": "/ufo-pattern_ez9amb.png",
                 "altText": "Line art of a UFO",
                 "width": 501,
@@ -57,9 +57,9 @@
             },
             {
                 "title": "Natural Healing shop banner",
-                "description": "Banner for web shop",
+                "description": "Banner incorporating logo design with website title.",
                 "defaultUrl": "/natural-healing-banner_sworrs.png",
-                "altText": "Words Natural Healing with logo",
+                "altText": "Words 'Natural Healing' with logo",
                 "width": 900,
                 "height": 200,
                 "sources": [
@@ -75,7 +75,7 @@
             },
             {
                 "title": "Honda Civic Type R",
-                "description": "Line drawing of Honda Civic Type R",
+                "description": "Line art inspired by Civic Type R car.",
                 "defaultUrl": "/mugen-civic-type-r_xetesl.png",
                 "altText": "Line drawing of Honda Civic Type R",
                 "width": 671,

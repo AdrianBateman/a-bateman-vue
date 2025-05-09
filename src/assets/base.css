@@ -22,7 +22,7 @@ body {
   display: flex;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: var(--size-lg);
+  padding: var(--size-md);
   font-family: var(--primary-font);
   line-height: var(--size-lg);
   background: var(--primary-bkgd);

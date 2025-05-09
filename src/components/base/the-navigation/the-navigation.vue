@@ -22,7 +22,7 @@
       >
         <RouterLink
           to="/hobbies"
-          exact-active-class="the-nav--active"
+          exact-active-class="link--active"
           class="link"
         >
           Hobbies
@@ -34,7 +34,7 @@
 
 <style scoped lang="scss">
 .nav {
-  margin-bottom: var(--size-xxl);
+  margin-bottom: var(--size-md);
 }
 
 .list {
